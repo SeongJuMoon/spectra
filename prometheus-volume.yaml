@@ -11,32 +11,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.1.10
-    path: /nfs_shared
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: prometheus-server
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 10Gi
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: prometheus-server
-spec:
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
-  nfs:
-    server: 192.168.1.10
-    path: /nfs_shared
+    path: /nfs_shared/prometheus/server
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -61,7 +36,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.1.10
-    path: /nfs_shared
+    path: /nfs_shared/prometheus/alertmanager
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -86,12 +61,12 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.1.10
-    path: /nfs_shared
+    path: /nfs_shared/prometheus/pushgateway
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pushgw
+  name: pushgateway
 spec:
   accessModes:
     - ReadWriteMany

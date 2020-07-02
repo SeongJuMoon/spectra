@@ -5,4 +5,5 @@ helm install prometheus \
 --set pushgateway.persistentVolume.existingClaim="pushgw" \
 --set server.securityContext.fsGroup=2000 \
 --set server.securityContext.runAsUser=1000 \
+--version 11.6.0 \
 stable/prometheus
