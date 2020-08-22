@@ -27,7 +27,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: prometheus-alert-manager
+  name: prometheus-alertmanager
 spec:
   capacity:
     storage: 10Gi
@@ -41,7 +41,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: prometheus-alert-manager
+  name: prometheus-alertmanager
 spec:
   accessModes:
     - ReadWriteMany
@@ -52,7 +52,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pushgw
+  name: pushgateway
 spec:
   capacity:
     storage: 10Gi
