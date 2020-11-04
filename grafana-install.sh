@@ -7,5 +7,4 @@ helm install grafana \
 --set tolerations[0].effect=NoSchedule \
 --set tolerations[0].operator=Exists \
 --set nodeSelector."kubernetes\.io/hostname"=m-k8s \
---version 5.3.0 \
-stable/grafana
+edu/grafana

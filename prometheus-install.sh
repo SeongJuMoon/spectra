@@ -14,5 +14,4 @@ helm install prometheus \
 --set server.tolerations[0].key=node-role.kubernetes.io/master \
 --set server.tolerations[0].effect=NoSchedule \
 --set server.tolerations[0].operator=Exists \
---version 11.6.0 \
-stable/prometheus
+edu/prometheus
